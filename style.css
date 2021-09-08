@@ -1,0 +1,71 @@
+H1{
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+}
+
+h2{
+    /* text-align: center; */
+    font-family: 'Inconsolata', monospace;
+    font-weight: 300;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(48, 48, 48);
+    color: azure;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+select{
+    font-size: 0.9em;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 300;
+}
+
+input[type="range"]{
+    width: 80%;
+}
+
+button[type="button"]{
+    border-radius: 0%;
+}
+
+/* =================== GESTION DES BOX =================== */
+
+box-main{
+    display: flex;
+}
+box-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+
+box-right{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+box-title{
+    text-align: center;
+
+}
+
+box-name{
+    width: 30%;
+}
+
+box-slider{
+    padding: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

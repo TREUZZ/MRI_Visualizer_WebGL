@@ -1,0 +1,87 @@
+<html>
+
+<head>
+	<title>WebGL - Canvas test</title>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<!------------------------------------------------------------------->
+	<link href="style.css" rel="stylesheet">
+<!------------------------------------------------------------------->
+	<script type="text/javascript" src="glMatrix.js"></script>
+	<script type="text/javascript" src="callbacks.js"></script>
+	<script type="text/javascript" src="glCourseBasis.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+<!------------------------------------------------------------------->
+
+</head>
+
+<!-- <header>
+	<H1> < IRM_VIEWER_WEBGL > </H1>
+</header> -->
+
+<body onload="webGLStart();getSingle();">
+	<h1>< WebGl_RMI_Viewer ><br>
+	< Sakr_&_Mouquet ></Sakr></h1>
+	<box-main>
+		<box-left>
+			<canvas id="WebGL-test" style="border:none;" width="800" height="800"></canvas>
+			<br><br>
+			<button type="button" onclick="loadShaders('shader')">Load Shaders</button>
+		</box-left>
+		<box-right>
+			<box-title>
+				<h2>< Parameter_Panel ></h2> 
+			</box-title>
+			<box-slider>
+				<box-name> 
+					Alpha
+					<output id="alphaValue" name="alphaValue" for="Alpha">O</output>%
+				</box-name>
+				<input type="range" id="alpha" min="0%" max="100%" onclick="alphaValue.value=alpha.value">
+			</box-slider>
+			<box-slider>
+				<box-name> 
+					Treshold Haut
+					<output id="tresholdValueH" name="tresholdValueH" for="TresholdH">O</output>%
+				</box-name>
+				<input type="range" id="tresholdH" min="0%" max="100%" onload="tresholdValueH.value=100" onclick="tresholdValueH.value=tresholdH.value">
+			</box-slider>
+			<box-slider>
+				<box-name> 
+					Treshold Bas
+					<output id="tresholdValueB" name="tresholdValueB" for="TresholdB">O</output>%
+				</box-name>
+				<input type="range" id="tresholdB" min="0%" max="100%" onload="tresholdValueH.value=1" onclick="tresholdValueB.value=tresholdB.value">
+			</box-slider>
+			<box-slider class="sliceBox">
+				<box-name id="sliceName"> 
+					Slice
+					<output id="sliceNumbr" name="sliceNumbr" for="Slice">O</output>
+				</box-name>
+				<input type="range" id="slice" min="0" max="154" oninput="sliceNumbr.value=slice.value"/>
+			</box-slider>
+			<box-slider>
+				<box-name>
+					Single View
+				</box-name>
+				<input type="checkbox" id="single" onclick="getSingle()" />
+			</box-slider>
+			<box-slider>
+				<box-name>
+					HeatMap Color
+				</box-name>
+				<select name="shader" id="shader" onclick="changeShader(document.getElementById('shader').value)">
+					<option value="shader" selected="selected">Grey lvl</option>
+					<option value="shaderHeatMap">Heatmap</option>
+					<option value="shaderCustomColor">Custom Color</option>
+				</select>
+			</box-slider>
+			<box-slider>
+				<input type="color" id="col1" name="col1" value="#f6b73c">
+				<input type="color" id="col2" name="col1" value="#f6b73c">
+				<input type="color" id="col3" name="col1" value="#f6b73c">
+				<input type="color" id="col4" name="col1" value="#f6b73c">
+			</box-slider>
+		</box-right>
+	</box-main>
+</body>
+</html>
